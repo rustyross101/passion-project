@@ -1,15 +1,15 @@
 get '/' do 
-	erb :"aliens/new"
+	erb :"/index"
 end
-
+#sessions new
 get '/sessions/new' do 
-  erb :"sessions/new"
+  erb :"sessions/new", :layout => !request.xhr?
 end
-
+#sessions create
 post '/sessions' do
-  @user = User.find_by(email: params[:user][:email])
+  @user = User.find_by(email: params[:email])
   if @user
-    if @user.authenticate?(params[:email][:password])
+    if @user.authenticate?(params[:password])
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
     else
@@ -18,6 +18,12 @@ post '/sessions' do
     end
   else
     @error = "You are not registered. Please register."
-    redirect "/sessions/new"
+    redirect '/sessions/new'
   end
 end
+
+#session delete
+  delete '/sessions/:id' do 
+    session[:id] = nil 
+    redirect '/'
+  end 

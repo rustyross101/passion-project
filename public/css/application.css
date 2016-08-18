@@ -1,0 +1,98 @@
+body {
+	background-image: url("droid-factory-1.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	color: white;
+}	
+
+.header {
+	border: 1px solid white;
+	display: inline-block;
+	color: white;
+	margin: 30px;
+    background-color: black;
+    border: 1px solid white;
+    background-opacity: 0.6;
+    text-align: center;
+
+
+}
+
+#species {
+	width: 20%;
+	float: right;	
+}
+ 
+#spacehip {
+	width: 20%;
+	float: left;
+}
+	
+#planet {
+	width: 20%;
+	float: left;
+}
+
+.entry_section {
+	display: inline-block;
+	float: center;
+	padding: 10px;
+	background-color: black;
+}
+
+.
+
+.generate {
+	padding: 300px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	border:2px solid #336600;
+	padding:3px;
+	align: center;
+}	
+
+.register {
+	padding: 300px;
+	text-align: center;
+	color:white;
+	background-color: black;
+	border:2px solid #336600;
+	padding:3px;
+	align: center;
+
+}	
+
+.register_pg_button {
+	padding: 300px;
+	text-align: center;
+	color:white;
+	background-color: black;
+	border:2px solid #336600;
+	padding:3px;
+	align: center;
+}
+
+.login {
+	padding: 300px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	border:2px solid #336600;
+	padding:3px;
+	align: center;
+}
+
+.login_form {
+	padding: 300px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	border:2px solid #336600;
+	padding:3px;
+	align: center;
+}
+

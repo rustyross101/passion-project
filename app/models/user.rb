@@ -20,3 +20,4 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true, presence: true
   validates :password_hash, presence: true
 end
+
