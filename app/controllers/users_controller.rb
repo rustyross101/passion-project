@@ -15,8 +15,9 @@ post '/users' do
 end
 
 get '/users/generate' do 
-	@alderaan = get_alderaan["results"][0]
-	pp @alderaan
+	@planet = get_planet["results"].sample
+	@species = get_species["results"].sample
+	@starship = get_starship["results"].sample
 	erb :'/users/generate'
 end
 
