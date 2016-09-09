@@ -18,7 +18,11 @@ get '/users/generate' do
 	@planet = get_planet["results"].sample
 	@species = get_species["results"].sample
 	@starship = get_starship["results"].sample
-	erb :'/users/generate'
+	if request.xhr?
+		erb :'/users/_generate', locals: {planet: @planet, species: @species, starship: @starship}, layout: false
+	else
+		erb :'/users/generate'
+	end	
 end
 
 #users show

@@ -1,37 +1,49 @@
-// $(document).ready(function() {
-// //   // This is called after the document has loaded in its entirety
-// //   // This guarantees that any elements we bind to will exist on the page
-// //   // when we try to bind to them
+$(document).ready(function() {
+  generate();
+});
 
-// //   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-// //   $.get('http://swapi.co/api/planets/', function(response) {
-// //   	var my_obj = response;
-// //   	var array = my_obj.results;
-// //   	var sample = array[Math.floor(Math.random()*array.length)];
-// //   	console.log(sample.name);
-// //   });
-// //   generateListener();
-// // });
+function generate(){
+	$('#generate_form').on('submit', function(event){
+		event.preventDefault();
+		
+		var generateForm = $(this);
+		var generateFormUrl = $(this).attr("action");
 
-// function generateListener() {
+		var request = $.ajax({
+			method: 'GET', 
+			url: generateFormUrl
+		});
 
-// 	$('.generate').on('click', function(e) {
-// 		e.preventDefault();
-// 		$.ajax({
-// 			method: 'get',
-// 			url: '/sessions/new'
-// 			//get response data 
-// 		})
-// 		.done(function(serverResponse){
-// 			console.log(serverResponse);
-
-// 			$(".home").append(serverResponse);
-// 		});
-// 	});
-// }
-// generateListener();
-// });
+		request.done(function(response){
+			$('#last_min_append').append(response);
+		});
+	});
+}
 
 
-// // var randomFiveNumbers = _.sample(x, 5);
-// // x[Math.floor(Math.random()*x.length)];
+
+function enterForm(){
+  $('#new-post-form').on('submit', function(event){
+    event.preventDefault();
+
+    var newpostForm = $(this);
+    var commentFormUrl = $(this).attr("action");
+    var commentFormData = $(this).serialize();
+
+    var request = $.ajax({
+      method: 'POST',
+      url: commentFormUrl,
+      data: commentFormData
+    });
+
+    request.done(function(response){
+      console.log(newpostForm);
+      $('#post-list').prepend(response);
+      $('#new-post-form')[0].reset();
+    });
+
+    request.fail(function(response) {
+      console.log("failed");
+    });
+  });
+}

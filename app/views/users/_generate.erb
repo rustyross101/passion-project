@@ -14,7 +14,7 @@
 		        <div class="container">
 					<div class="columns" >
 						<h1><%= @planet["name"] %></h1>
-						<ul>
+						<ul style="list-style: none;">
 							<li>Rotation Period: <%= @planet["rotation_period"]%></li>
 							<li>Orbital Period: <%= @planet["orbital_period"]%></li>
 							<li>Diameter: <%= @planet["diameter"]%></li>
@@ -34,7 +34,7 @@
 	        <div class="container">
 					<div class="columns">
 						<h1><%= @species["name"] %></h1>
-						<ul>
+						<ul style="list-style: none;">
 							<li>Classification: <%= @species["classification"]%></li>
 							<li>Designation: <%= @species["designation"]%></li>
 							<li>Average Height: <%= @species["average_height"]%></li>
@@ -55,7 +55,7 @@
 			<div class="container">
 					<div class="columns">
 						<h1><%= @starship["name"] %></h1>
-							<ul>
+							<ul style="list-style: none;">
 								<li>Model: <%=@starship["model"]%></li>
 								<li>Manufacturer: <%= @starship["manufacturer"]%></li>
 								<li>Cost: <%= @starship["cost_in_credits"]%></li>
