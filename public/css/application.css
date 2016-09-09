@@ -1,12 +1,17 @@
+html { 
+  background: url(droid-factory-1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+};
+
+
 body {
-	background-image: url("droid-factory-1.jpg");
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	min-height: 100%;
 	color: white;
-}	
+	font-family: 'Baloo Paaji', cursive;
+
+};
 
 .header {
 	border: 1px solid white;
@@ -19,31 +24,14 @@ body {
     text-align: center;
 
 
-}
-
-#species {
-	width: 20%;
-	float: right;	
-}
- 
-#spacehip {
-	width: 20%;
-	float: left;
-}
-	
-#planet {
-	width: 20%;
-	float: left;
-}
+};
 
 .entry_section {
 	display: inline-block;
 	float: center;
 	padding: 10px;
 	background-color: black;
-}
-
-.
+};
 
 .generate {
 	padding: 300px;
@@ -53,7 +41,7 @@ body {
 	border:2px solid #336600;
 	padding:3px;
 	align: center;
-}	
+};	
 
 .register {
 	padding: 300px;
@@ -64,7 +52,7 @@ body {
 	padding:3px;
 	align: center;
 
-}	
+};	
 
 .register_pg_button {
 	padding: 300px;
@@ -74,7 +62,7 @@ body {
 	border:2px solid #336600;
 	padding:3px;
 	align: center;
-}
+};
 
 .login {
 	padding: 300px;
@@ -84,7 +72,7 @@ body {
 	border:2px solid #336600;
 	padding:3px;
 	align: center;
-}
+};
 
 .login_form {
 	padding: 300px;
@@ -94,5 +82,52 @@ body {
 	border:2px solid #336600;
 	padding:3px;
 	align: center;
+};
+
+.container {
+	display: flex;
+	justify-content: center;
+	color: white;
+	font-family: "Arial Black", Gadget, sans-serif;
+	border-width: 1px;
+	border-color: white;
+	background-color: black;
 }
 
+#left_column {
+	/*float: left;*/
+	/*width: 25%;*/
+	padding: 20px;
+}
+
+#middle_column {
+	/*float: center;*/
+	/*width: 25%;*/
+	padding: 20px;
+}
+
+#right_column {
+	/*float: right;*/
+	/*width: 25%;*/
+	padding: 20px;
+}
+
+.columns {
+	color: white;
+	font-size: 125%;
+	border-width: 1px;
+	background-color: black;
+	background-opacity: 0.50;
+	align: center;
+	font-family: 'Baloo Paaji', cursive;
+}
+
+h1 {
+	color: white;
+	font-size: 125%;
+	border-width: 1px;
+	background-color: black;
+	background-opacity: 0.50;
+	align: center;
+	font-family: 'Baloo Paaji', cursive;
+}

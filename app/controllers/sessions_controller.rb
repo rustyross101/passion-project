@@ -13,10 +13,13 @@ post '/sessions' do
       session[:id] = @user.id
       redirect "/users/#{@user.id}"
     else
+      puts "INSIDE THE ELSE, should display invalid login."
       @error = "Invalid login information. Please try again."
       redirect '/sessions/new'
     end
   else
+  puts "INSIDE THE OUTTER ELSE, should display not registered."
+
     @error = "You are not registered. Please register."
     redirect '/sessions/new'
   end

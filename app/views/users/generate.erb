@@ -1,4 +1,5 @@
-
+<div class="container">
+<div class="columns" id="right_column">
 <h1><%= @planet["name"] %></h1>
 	<ul>
 		<li>Rotation Period: <%= @planet["rotation_period"]%></li>
@@ -10,7 +11,9 @@
 		<li>Surface Water: <%= @planet["surface_water"]%></li>
 		<li>Population: <%= @planet["population"]%></li>
 	</ul>
+</div>
 
+<div class="columns" id="middle_column">
 <h1><%= @starship["name"] %></h1>
 	<ul>
 		<li>Model: <%= @starship["model"]%></li>
@@ -24,7 +27,9 @@
 		<li>Hyperdrive Rating: <%= @starship["hyperdrive_rating"]%></li>
 		<li>Starship Class: <%= @starship["starship_class"]%></li>
 	</ul>
+</div>
 
+<div class="columns" id="left_column">
 <h1><%= @species["name"] %></h1>
 	<ul>
 		<li>Classification: <%= @species["classification"]%></li>
@@ -37,7 +42,7 @@
 		<li>Homeworld: <%= @species["homworld"]%></li>
 		<li>Language: <%= @species["langage"]%></li>
 	</ul>
+</div>
+</div>
 
-
-
-
+<!-- emmet -->
