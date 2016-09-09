@@ -1,48 +1,83 @@
-<div class="container">
-<div class="columns" id="right_column">
-<h1><%= @planet["name"] %></h1>
-	<ul>
-		<li>Rotation Period: <%= @planet["rotation_period"]%></li>
-		<li>Orbital Period: <%= @planet["orbital_period"]%></li>
-		<li>Diameter: <%= @planet["diameter"]%></li>
-		<li>Climate: <%= @planet["climate"]%></li>
-		<li>Gravity: <%= @planet["gravity"]%></li>
-		<li>Terrain: <%= @planet["terrain"]%></li>
-		<li>Surface Water: <%= @planet["surface_water"]%></li>
-		<li>Population: <%= @planet["population"]%></li>
-	</ul>
-</div>
+<div class="my_div">
+	<div id="carousel-example" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example" data-slide-to="1"></li>
+	    <li data-target="#carousel-example" data-slide-to="2"></li>
+	  </ol>
 
-<div class="columns" id="middle_column">
-<h1><%= @starship["name"] %></h1>
-	<ul>
-		<li>Model: <%= @starship["model"]%></li>
-		<li>Manufacturer: <%= @starship["manufacturer"]%></li>
-		<li>Cost: <%= @starship["cost_in_credits"]%></li>
-		<li>Length: <%= @starship["length"]%></li>
-		<li>Max Atmosphering Speed: <%= @starship["max_atmosphering_speed"]%></li>
-		<li>Crew: <%= @starship["crew"]%></li>
-		<li>Passengers: <%= @starship["passengers"]%></li>
-		<li>Consumabes: <%= @starship["consumables"]%></li>
-		<li>Hyperdrive Rating: <%= @starship["hyperdrive_rating"]%></li>
-		<li>Starship Class: <%= @starship["starship_class"]%></li>
-	</ul>
-</div>
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <!-- <a href="#"><img src="http://placekitten.com/1600/600" /></a> -->
+		 	<div class="carousel-caption">
 
-<div class="columns" id="left_column">
-<h1><%= @species["name"] %></h1>
-	<ul>
-		<li>Classification: <%= @species["classification"]%></li>
-		<li>Designation: <%= @species["designation"]%></li>
-		<li>Average Height: <%= @species["average_height"]%></li>
-		<li>Skin Colors: <%= @species["skin_color"]%></li>
-		<li>Hair Colors: <%= @species["hair_colors"]%></li>
-		<li>Eye Colors: <%= @species["eye_colors"]%></li>
-		<li>Average Lifespan: <%= @species["average_lifespan"]%></li>
-		<li>Homeworld: <%= @species["homworld"]%></li>
-		<li>Language: <%= @species["langage"]%></li>
-	</ul>
-</div>
-</div>
+		        <div class="container">
+					<div class="columns" >
+						<h1><%= @planet["name"] %></h1>
+						<ul>
+							<li>Rotation Period: <%= @planet["rotation_period"]%></li>
+							<li>Orbital Period: <%= @planet["orbital_period"]%></li>
+							<li>Diameter: <%= @planet["diameter"]%></li>
+							<li>Climate: <%= @planet["climate"]%></li>
+							<li>Gravity: <%= @planet["gravity"]%></li>
+							<li>Terrain: <%= @planet["terrain"]%></li>
+							<li>Surface Water: <%= @planet["surface_water"]%></li>
+							<li>Population: <%= @planet["population"]%></li>
+						</ul>
+					</div>
+				</div> 
+		    </div>
+	    </div>
+	    <div class="item">
+	      <!-- <a href="#"><img src="http://placekitten.com/1600/600" /></a> -->
+	      <div class="carousel-caption">
+	        <div class="container">
+					<div class="columns">
+						<h1><%= @species["name"] %></h1>
+						<ul>
+							<li>Classification: <%= @species["classification"]%></li>
+							<li>Designation: <%= @species["designation"]%></li>
+							<li>Average Height: <%= @species["average_height"]%></li>
+							<li>Skin Colors: <%= @species["skin_color"]%></li>
+							<li>Hair Colors: <%= @species["hair_colors"]%></li>
+							<li>Eye Colors: <%= @species["eye_colors"]%></li>
+							<li>Average Lifespan: <%= @species["average_lifespan"]%></li>
+							<li>Homeworld: <%= @species["homworld"]%></li>
+							<li>Language: <%= @species["langage"]%></li>
+						</ul>
+					</div>
+				</div> 
+	      </div>
+	    </div>
+	    <div class="item">
+	      <!-- <a href="#"><img src="http://placekitten.com/1600/600" /></a> -->
+	      <div class="carousel-caption">
+			<div class="container">
+					<div class="columns">
+						<h1><%= @starship["name"] %></h1>
+							<ul>
+								<li>Model: <%=@starship["model"]%></li>
+								<li>Manufacturer: <%= @starship["manufacturer"]%></li>
+								<li>Cost: <%= @starship["cost_in_credits"]%></li>
+								<li>Length: <%= @starship["length"]%></li>
+								<li>Max Atmosphering Speed: <%= @starship["max_atmosphering_speed"]%></li>
+								<li>Crew: <%= @starship["crew"]%></li>
+								<li>Passengers: <%= @starship["passengers"]%></li>
+								<li>Consumabes: <%= @starship["consumables"]%></li>
+								<li>Hyperdrive Rating: <%= @starship["hyperdrive_rating"]%></li>
+								<li>Starship Class: <%= @starship["starship_class"]%></li>
+							</ul>
+					</div>
+				</div> 
+	      </div>
+	    </div>
+	  </div>
 
-<!-- emmet -->
+	  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+</div>
