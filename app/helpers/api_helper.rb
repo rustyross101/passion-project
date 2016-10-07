@@ -5,12 +5,10 @@ helpers do
 
 	def get_planet
 		response = HTTParty.get('http://swapi.co/api/planets')
-		response
 	end
 
 	def get_starship
 		response = HTTParty.get('http://swapi.co/api/starships')
-		response
 	end
 
 	def get_species

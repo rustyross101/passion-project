@@ -21,29 +21,3 @@ function generate(){
 }
 
 
-
-function enterForm(){
-  $('#new-post-form').on('submit', function(event){
-    event.preventDefault();
-
-    var newpostForm = $(this);
-    var commentFormUrl = $(this).attr("action");
-    var commentFormData = $(this).serialize();
-
-    var request = $.ajax({
-      method: 'POST',
-      url: commentFormUrl,
-      data: commentFormData
-    });
-
-    request.done(function(response){
-      console.log(newpostForm);
-      $('#post-list').prepend(response);
-      $('#new-post-form')[0].reset();
-    });
-
-    request.fail(function(response) {
-      console.log("failed");
-    });
-  });
-}
